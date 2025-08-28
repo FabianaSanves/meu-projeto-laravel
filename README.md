@@ -1,61 +1,80 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+📝 [Notas]
+Uma aplicação CRUD de notas desenvolvida em PHP com Laravel.
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+📖 Sobre o Projeto
+Este é um sistema simples para gerenciamento de notas. Os usuários podem se registrar, fazer login e gerenciar suas próprias notas. A aplicação permite realizar todas as operações básicas de um CRUD (Create, Read, Update, Delete):
 
-## About Laravel
+Cadastrar Usuário: Criação de uma conta de usuário.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Login: Acesso à área de notas com as credenciais cadastradas.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Adicionar Nota: Criação de novas notas.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Visualizar/Listar Notas: Exibição das notas cadastradas.
 
-## Learning Laravel
+Editar Nota: Atualização do conteúdo de uma nota existente.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Excluir Nota: Remoção de uma nota do banco de dados.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+⚙️ Tecnologias Utilizadas
+Linguagem: PHP
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Framework: Laravel 6.0
 
-## Laravel Sponsors
+Banco de Dados: MySQL (gerenciado com HeidiSQL)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+Gerenciamento de Pacotes: Composer
 
-### Premium Partners
+Front-end: HTML, CSS, JavaScript (padrão)
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+🚀 Instalação e Execução
+Siga os passos abaixo para configurar e rodar o projeto em sua máquina local.
 
-## Contributing
+Pré-requisitos
+- PHP 8.2 ou superior
+- Versão atualizada do Apache
+- Versão atualizada do C++
+- Laravel Herd
+- Composer
+- NodeJS
+- HeidiSQL
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Passo a Passo
+Clone o repositório: https://github.com/FabianaSanves/meu-projeto-laravel.git
 
-## Code of Conduct
+Bash
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+git clone [Link para o Repositório]
+cd [Notes]
+Instale as dependências do Composer: 
 
-## Security Vulnerabilities
+Bash
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+composer install
+Configure o arquivo de ambiente:
 
-## License
+Copie o arquivo .env.example e renomeie-o para .env.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Abra o arquivo .env e configure as credenciais do seu banco de dados:
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=laravel_notes_fabi
+DB_USERNAME=user_laravel_notes_fabi2
+DB_PASSWORD=27Go4AguwEBON83o834ur2Hoc68ecE
+
+Bash
+
+php artisan key:generate
+Rode as migrações para criar as tabelas no banco de dados:
+
+Bash
+
+php artisan migrate
+Inicie o servidor de desenvolvimento do Laravel:
+
+Bash
+
+php artisan serve
+A aplicação estará acessível em http://127.0.0.1:8000.
